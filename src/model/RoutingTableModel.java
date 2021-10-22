@@ -1,6 +1,8 @@
 package model;
 
-public class RoutingTableModel {
+import java.io.Serializable;
+
+public class RoutingTableModel  implements Serializable {
 
     private String dest_sub;
 

@@ -1,4 +1,4 @@
-package Router.A;
+package Router.B;
 
 import Socket_RIP.ConfigRouter;
 import Socket_RIP.Socket_RIP_Server;
@@ -8,7 +8,7 @@ public class Server {
         ConfigRouter configRouter =new ConfigRouter();
         configRouter.setRouterFile("Router_B.txt");
         configRouter.setRouterName("Router_B");
-        configRouter.setPort(9090);
+        configRouter.setPort(9092);
 
         Socket_RIP_Server socketServer=new Socket_RIP_Server();
         socketServer.Response(configRouter);
