@@ -9,9 +9,12 @@ import java.util.*;
 //import java.util.ArrayList;
 //import java.util.Arrays;
 //import java.util.List;
+import jdk.nashorn.internal.parser.JSONParser;
 import model.RoutingTableModel;
 
 import controller.*;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import service.RouterService;
 import service.RoutingTable;
 import model.*;
@@ -66,7 +69,14 @@ public class Client {
             //  os.writeObject(student);
             System.out.println(1);
             System.out.println( routerModelA.getRoutingTableModels().toString());
-            os.writeObject(routerModelA.getRoutingTableModels().toString());
+            JSONArray array = new JSONArray(routerModelA.getRoutingTableModels().toString());
+            System.out.println(array);
+
+//            Gson g = new Gson(); Player p = g.fromJson(jsonString, Player.class)
+//
+//            Read more: https://www.java67.com/2016/10/3-ways-to-convert-string-to-json-object-in-java.html#ixzz79r4dzvRg
+
+            os.writeObject(array.toString());
             // os.writeObject(object);
             System.out.println(2);
 

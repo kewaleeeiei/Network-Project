@@ -47,6 +47,7 @@ public class RoutingTableModel  implements Serializable {
 
     @Override
     public String toString() {
-        return "[destination subnet = " + dest_sub + ", next router = " + next_router + ", hops to dest = " + hops_to_dest +" ]";
+//        "{\"name\":\"John\",\"age\":\"30\"}"
+        return "{\"destination subnet\" : " + "\"" +dest_sub + "\"," + "\"next router\" : " + "\"" + next_router + "\"," + "\"hops to dest\" : " + "\"" +hops_to_dest +"\"" +"}";
     }
 }
